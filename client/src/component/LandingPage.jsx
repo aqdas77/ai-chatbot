@@ -20,7 +20,7 @@ const LandingPage = () => {
     try {
       const chats = { messageType: "message", value: inputText };
       setChat((prevData) => [...prevData, chats]);
-      const response = await axios.post("http://localhost:3000/message", data);
+      const response = await axios.post("https://ai-chatbot-k31p.onrender.com/message", data);
       const resData = { messageType: "response", value: response.data.result };
       setChat((prevData) => [...prevData, resData]);
       setInputText("");
